@@ -11,8 +11,8 @@ def valid_move?(board,index)
 index.between?(0,8) && !position_taken?(board,index)
 end
 
-def move(board,player_move,player="X")
-  board[player_move] = player
+def move(board,index,player="X")
+  board[index] = player
   board
 end
 
@@ -31,4 +31,6 @@ def turn(board)
     puts "Input invalid"
     return turn(board)
   end
+  move(board,index,player="X")
+  display_board(board)
 end
