@@ -31,5 +31,5 @@ def turn(board)
     puts "Input invalid"
     return turn(board)
   end
-  index
+  puts index
 end
