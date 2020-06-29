@@ -29,6 +29,6 @@ def turn(board)
   index = input_to_index(gets.strip)
   until valid_move?(board,index)
     puts "Input invalid"
-    turn(board)
+    return turn(board)
   end
 end
