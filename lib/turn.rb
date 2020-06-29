@@ -27,5 +27,8 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = input_to_index(gets.strip)
-  puts input
+  until valid_move?(input)
+    puts "Input invalid"
+    turn
+  end
 end
