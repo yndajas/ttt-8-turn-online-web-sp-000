@@ -29,7 +29,7 @@ def turn(board)
   index = input_to_index(gets.strip)
   until valid_move?(board,index)
     puts "Input invalid"
-    return turn(board)
+    return turn(board) # until loop doesn't end without 'return' here but I'm not 100% sure why it works with return
   end
   move(board,index,player="X")
   display_board(board)
